@@ -46,7 +46,7 @@ sudo ln -sf $PWD/build-local.sh /usr/local/bin/runner
 Calling 
 
 ```
-runner COMMAND
+runner -c COMMAND
 ```
 
 will pass COMMAND as the container's COMMAND (default will be /bin/bash).

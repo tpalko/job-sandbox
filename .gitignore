@@ -1,3 +1,4 @@
 pipeline-yaml/**
 !pipeline-yaml/util.sh
 env/gitlab_vars.env
+options/images.txt

@@ -9,7 +9,7 @@ RUN git config --global --add safe.directory /opt/repo || echo "no git"
 
 VOLUME /opt/repo 
 
-ARG IMGUSER
+ARG IMGUSER=
 USER ${IMGUSER}
 
 ENTRYPOINT ["./start.sh"]
