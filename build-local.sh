@@ -6,8 +6,12 @@ CONFIG_FOLDER="$(dirname $(readlink $0))"
 IMAGE_NAME=job-sandbox
 
 function file_as_menu() {
+    
     local CHOICE_FILE="$1"
     local STORE_VAR="$2"
+
+    echo "Creating menu from ${CHOICE_FILE}"
+
     local MENU_ITEM_INDEX=0
     local LINES=()
     local CHOICE

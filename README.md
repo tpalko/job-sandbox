@@ -3,7 +3,26 @@
 The purpose of this program is to locally emulate a pipeline job for convenient troubleshooting by
 providing a local shell in which individual job commands/script lines can be executed individually and repeatedly.
 
-## configuration 
+## system configuration
+
+* a docker daemon, Docker Desktop integrated with WSL, or otherwise some container runtime running on the local workstation
+* networking + privileges to pull images from somewhere 
+* a *nix shell, (cygwin on Windows) through which this program can be executed
+* root or Administrator run-as privilege
+
+If using cygwin, recommended to have the following helpful packages installed:
+
+_these may not be strictly necessary for operation of the sandbox, however this is the package set installed on the initial Windows test host_ 
+
+* cron
+* kcron
+* openssh
+* rsync
+* unzip
+* vim
+* zip
+
+## file configuration 
 
 ### options/images.txt 
 
@@ -40,6 +59,10 @@ something like
 ```
 sudo ln -sf $PWD/build-local.sh /usr/local/bin/runner
 ```
+
+or on Windows, simply without the `sudo` in a cygwin shell "run as Administrator".
+
+`/usr/local/bin` is typically in PATH by default, however technically any folder listed in `echo $PATH` for the user expected to run the sandbox will suffice.
 
 ## execution 
 
